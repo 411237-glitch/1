@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作業備忘錄</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>作業備忘錄</h1>
+    <div id="calendar-controls">
+        <button id="prev-week">上一週</button>
+        <select id="year-select"></select>
+        <select id="month-select"></select>
+        <button id="next-week">下一週</button>
+    </div>
+    <div id="calendar"></div>
+    <div id="task-form" style="display: none;">
+        <h2>設定作業 - <span id="selected-date"></span></h2>
+        <form id="add-task-form">
+            <label for="subject">科目:</label>
+            <select id="subject" required>
+                <option value="國文">國文</option>
+                <option value="數學">數學</option>
+                <option value="英文">英文</option>
+                <option value="地理">地理</option>
+                <option value="歷史">歷史</option>
+                <option value="公民">公民</option>
+                <option value="地科">地科</option>
+                <option value="生物">生物</option>
+                <option value="化學">化學</option>
+                <option value="物理">物理</option>
+                <option value="其他">其他</option>
+            </select>
+            <label for="pages">頁數:</label>
+            <input type="text" id="pages" placeholder="例: 5 或 5~10" required>
+            <button type="submit">新增作業</button>
+        </form>
+        <div id="task-list"></div>
+    </div>
+    <div id="points-display">
+        <h2>隨機孢子: <span id="points">0</span></h2>
+        <button id="lottery-btn">種植</button>
+        <button id="view-pool-btn">查看獎池</button>
+        <div id="lottery-result"></div>
+        <div id="pool-display" style="display: none;"></div>
+    </div>
+    <div id="collection">
+        <h2>種植中的蕈菇</h2>
+        <div id="mushroom-list"></div>
+        <div id="mushroom-detail" style="display: none;">
+            <h3 id="detail-name"></h3>
+            <p id="detail-desc"></p>
+            <button id="close-detail">關閉</button>
+        </div>
+    </div>
+    <div id="confirm-dialog" style="display: none;">
+        <div id="confirm-message"></div>
+        <button id="confirm-yes">確定</button>
+        <button id="confirm-no">取消</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
